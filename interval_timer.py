@@ -42,12 +42,12 @@ class IntervalTimer:
 
     async def _run_timer(self):
         # Start with a prep phase
-        prep = 17
-        prep_done = 0
-        while prep_done < prep:
-            await asyncio.sleep(1)
-            prep_done += 1
-            self.tick.invoke(phase=TimerPhase.Preparation, done=prep_done, remaining=prep - prep_done)
+#        prep = 17
+#        prep_done = 0
+#        while prep_done < prep:
+#            await asyncio.sleep(1)
+#            prep_done += 1
+#            self.tick.invoke(phase=TimerPhase.Preparation, done=prep_done, remaining=prep - prep_done)
         
         # Note that the limits are exclusive upper bounds since we count starting from 0.
         repetitions_done = 0

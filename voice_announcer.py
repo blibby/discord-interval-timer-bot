@@ -20,12 +20,12 @@ class VoiceAnnouncer():
             self._voice_client.play(discord.FFmpegPCMAudio('sounds/prepare.mp3'))
 
         # Play sound halfway through the work phase if it is 30 seconds or longer.
-        if phase == TimerPhase.Work and remaining + done > 29:
+#        if phase == TimerPhase.Work and remaining + done > 29:
             # We get ticks for every full second.
             # If work is set for an uneven amount of seconds, we cannot hit the exact half.
             # Play sound half a second earlier then.
-            if done == remaining or done + 1 == remaining:
-                self._voice_client.play(discord.FFmpegPCMAudio('sounds/bell.mp3'))
+#            if done == remaining or done + 1 == remaining:
+#                self._voice_client.play(discord.FFmpegPCMAudio('sounds/bell.mp3'))
 
     def on_timer_started(self):
         self._voice_client.play(discord.FFmpegPCMAudio('sounds/timer-set.mp3'))
