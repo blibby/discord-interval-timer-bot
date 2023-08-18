@@ -6,11 +6,13 @@ import asyncio
 import discord
 from discord.ext import commands
 
+intents = discord.Intents.all()
+
 from interval_timer import IntervalTimer
 from voice_announcer import VoiceAnnouncer
 
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='!', intents=intents)
 timer = IntervalTimer()
 voice_announcer = None
 
